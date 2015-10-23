@@ -36,7 +36,18 @@ $response = $client->send_request($request);
 //fwrite($fh, "\n\n");
 //fclose($fh);
 
-var_dump($response);
+//var_dump($response);
+
+foreach($response as $item)
+{
+	//print_r($item);
+	echo "<p><p>";
+	foreach($item as $value)
+	{
+		print_r($value);
+		echo "<p><p>";
+	}
+}
 
 //echo $argv[0]." END".PHP_EOL;
 

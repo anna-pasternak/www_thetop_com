@@ -28,15 +28,26 @@ $response = $client->send_request($request);
 //echo "client received response: ".PHP_EOL;
 //print_r($response);
 
-$neat = var_dump($response);
+//$neat = var_dump($response);
 
-$myFile = "log.txt";
-$fh = fopen($myFile, 'a') or die("Can't open file");
-fwrite($fh, $neat);
-fwrite($fh, "\n\n");
-fclose($fh);
+//$myFile = "log.txt";
+//$fh = fopen($myFile, 'a') or die("Can't open file");
+//fwrite($fh, $neat);
+//fwrite($fh, "\n\n");
+//fclose($fh);
 
-var_dump($response);
+//var_dump($response);
+
+foreach($response as $item)
+{
+	//print_r($item);
+	echo "<p><p>";
+	foreach($item as $value)
+	{
+		print_r($value);
+		echo "<p><p>";
+	}
+}
 
 //echo $argv[0]." END".PHP_EOL;
 
