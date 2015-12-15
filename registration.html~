@@ -12,7 +12,7 @@
 <p><p><font color="white"><h1>Heading to The Top</h1></font></p></p>
 <p><font color="white"><h2>Register Below:</h2></font></p>
 <p><font color="white">Username:</font> <input type = text name = "username" required autofocus></p>
-<p><font color="white">E-mail:  </font> <input type = text name = "newEmail" required></p>
+<p><font color="white">E-mail:  </font> <input type = text name = "email" required></p>
 <p><font color="white">Password:</font> <input type = password name = "password" required></p>
 <input type=submit>
 </form>

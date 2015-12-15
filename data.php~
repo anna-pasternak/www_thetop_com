@@ -38,16 +38,42 @@ $response = $client->send_request($request);
 
 //var_dump($response);
 
-foreach($response as $item)
+
+print("<body background='weather.jpg'>");
+
+foreach($response as $one)
 {
 	//print_r($item);
 	echo "<p><p>";
-	foreach($item as $value)
+	foreach($one as $two)
 	{
-		print_r($value);
-		echo "<p><p>";
+		foreach($two as $three)
+		{
+			foreach($three as $four)
+			{
+				//var_dump($four);
+				//if is_array($four) continue;	
+if ( (array) $four !== $four ) { 
+    //echo '$four is not an array'; 
+	print($four);
+	echo "<p><p>";
+} else { 
+    //echo '$four is an array';
+	foreach($four as $five){
+		print($five);
+	} 
+}
+
+			
+				//print($four);				
+				//echo "<p><p>";
+
+
+			}
+		}
 	}
 }
+
 
 //echo $argv[0]." END".PHP_EOL;
 
