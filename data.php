@@ -16,65 +16,164 @@ else
 
 $request = array();
 $request['type'] = "getData";
-$request['username'] = "martinTest2";
-$request['password'] = "password";
-$request['email'] = "martinTest2@njit.edu";
 $request['message'] = $msg;
 $response = $client->send_request($request);
 
 
-//$response = $client->publish($request);
 
-//echo "client received response: ".PHP_EOL;
-//print_r($response);
-
-//$neat = var_dump($response);
-
-//$myFile = "log.txt";
-//$fh = fopen($myFile, 'a') or die("Can't open file");
-//fwrite($fh, $neat);
-//fwrite($fh, "\n\n");
-//fclose($fh);
-
-//var_dump($response);
-
-
+print("
+<head>
+<style>
+table, th, td {
+    
+    padding: 5px;
+    
+}
+table {
+    border-spacing: 5px;
+}
+#bigbox { border-radius: 20px; background:  #b3b3b3; }
+#titlebox { border-radius: 20px;  background:  #eeeeee; }
+#infobox { border-radius: 20px; height:200px; width:19%; background:  #eeeeee; }
+</style>
+</head>
+");
 print("<body background='weather.jpg'>");
 
-foreach($response as $one)
-{
-	//print_r($item);
-	echo "<p><p>";
-	foreach($one as $two)
-	{
-		foreach($two as $three)
-		{
-			foreach($three as $four)
-			{
-				//var_dump($four);
-				//if is_array($four) continue;	
-if ( (array) $four !== $four ) { 
-    //echo '$four is not an array'; 
-	print($four);
-	echo "<p><p>";
-} else { 
-    //echo '$four is an array';
-	foreach($four as $five){
-		print($five);
-		echo "<p><p>";
-	} 
-}
+print('<font color="white" align="center"><h1>New Jersey Weather</h1></font>');
 
-			
-				//print($four);				
-				//echo "<p><p>";
+print('
+<table <fieldset id = "bigbox">
+    <thead>
+        <tr>
+            <th><fieldset id = "titlebox">');
+	    print($response["0"]["0"]["city"]);
+            print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["1"]["0"]["city"]);
+	    print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["2"]["0"]["city"]);
+	    print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["3"]["0"]["city"]);
+	    print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["4"]["0"]["city"]);
+	    print('</font></th>
+ 
+        </tr>
+    </thead>
+    <tbody>
 
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["0"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["0"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["0"]["0"]["wind"]);
+	print('</font></td>
 
-			}
-		}
-	}
-}
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["1"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["1"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["1"]["0"]["wind"]);	
+	print('</font></td>
 
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["2"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["2"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["2"]["0"]["wind"]);
+	print('</font></td>
 
-//echo $argv[0]." END".PHP_EOL;
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["3"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["3"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["3"]["0"]["wind"]);
+	print('</font></td>
+
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["4"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["4"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["4"]["0"]["wind"]);
+	print('</font></td>
+   
+    </tbody>
+</table>
+<table <fieldset id = "bigbox">
+    <thead>
+        <tr>
+            <th><fieldset id = "titlebox">');
+	    print($response["5"]["0"]["city"]);
+            print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["6"]["0"]["city"]);
+	    print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["7"]["0"]["city"]);
+	    print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["8"]["0"]["city"]);
+	    print('</font></th>
+            <th><fieldset id = "titlebox">');
+	    print($response["9"]["0"]["city"]);
+	    print('</font></th>
+ 
+        </tr>
+    </thead>
+    <tbody>
+
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["5"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["5"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["5"]["0"]["wind"]);
+	print('</font></td>
+
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["6"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["6"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["6"]["0"]["wind"]);	
+	print('</font></td>
+
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["7"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["7"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["7"]["0"]["wind"]);
+	print('</font></td>
+
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["8"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["8"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["8"]["0"]["wind"]);
+	print('</font></td>
+
+        <td <fieldset id = "infobox">');
+	print('Temperature: '.$response["9"]["0"]["temp"]);
+	print("<p>");
+	print('Forecast: '.$response["9"]["0"]["weather"]);
+	print("<p>");
+	print('Wind: '.$response["9"]["0"]["wind"]);
+	print('</font></td>
+   
+    </tbody>
+</table>
+');
+
+?>
 

@@ -2,20 +2,33 @@
 <html>
 <head>
 <meta char-set="utf-8">
-<title>Heading to The Top</title>
+<title>Weather for New Jersey</title>
 </head>
 
-<body background="Soccerball.jpg">
 
-<form action = "login.php" method="post" >
-<p><p><font color="white"><h1>Heading to The Top</h1></font></p></p>
-<p><font color="white"><h2>Log-in Below:</h2></font></p>
-<p><font color="white">Username:</font><input type = text name = "username" id = "username" autocomplete = "on" required autofocus/></p>	
-<p><font color="white">Password:</font><input type = password name = "password" id = "password" autocomplete = "off" required/></p>
-<input type=submit>
+
+<style>
+fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; 
+            border-radius: 20px; /* CSS3 */ behavior:url("border-radius.htc"); }
+#innerfield { width: 40%; margin-top: 100px; background:  #eeeeee; }
+</style>
+
+
+<body background="weather.jpg">
+
+
+<form action = "login.php" method="post">
+	<fieldset id = innerfield>
+	<p><p><center><font color="black"><h1>New Jersey Weather</h1></font></center></p></p>
+	
+	<p><center><font color="black">Username: </font><input type = text name = "username" id = "username" autocomplete = "on" required autofocus/></center></p>	
+	<p><center><font color="black">Password:</font></center><br><center><input type = password name = "password" id = "password" autocomplete = "off" required/></center></p>
+	<center><input type=submit value="Login"></center>
+	</fieldset>
 </form>
 
-<p><a href="registration.html" style="color:white">Still need to Register? CLICK HERE!</a></p>
+
+<p><center><a href="registration.html" style="color:black">Still need to Register? CLICK HERE!</a></center></p>
 			
 </body>
 </html>

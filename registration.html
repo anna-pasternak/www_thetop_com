@@ -6,17 +6,49 @@
 <title>Heading to The Top</title>
 </head>
 
+<script>
+	function check(){
+		if(document.getElementById('password').value != document.getElementById('verifypassword').value){
+			document.getElementById('verifypassword').value = "";
+			document.getElementById('password').focus();
+			document.getElementById('warn').innerHTML = "Passwords Don't Match!";
+		}
+		else{
+			document.getElementById('warn').innerHTML = "";
+		}
+	}
+</script>
+
+
+<style>
+fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; 
+            border-radius: 20px; /* CSS3 */ behavior:url("border-radius.htc"); }
+#innerfield { width: 40%; margin-top: 100px; background:  #eeeeee; }
+</style>
+
 <body background="weather.jpg">
 
-<form action = "registration.php" method="post" >
-<p><p><font color="white"><h1>Heading to The Top</h1></font></p></p>
-<p><font color="white"><h2>Register Below:</h2></font></p>
-<p><font color="white">Username:</font> <input type = text name = "username" required autofocus></p>
-<p><font color="white">E-mail:  </font> <input type = text name = "email" required></p>
-<p><font color="white">Password:</font> <input type = password name = "password" required></p>
-<input type=submit>
+<form action = "registration.php" method = "post">
+	<fieldset id = innerfield>
+	<p><p><center><font color="black"><h1>New Jersey Weather</h1></font></center></p></p>
+
+	<p><center><font color="black">E-mail:  </font> <input type = text name = "email" required></center></p>
+	<p><center><font color="black">Username: </font> <input type = text name = "username" id = "username" required autofocus></center></p>
+	<p><center><font color="black">Password: </font> <input type = password name = "password" id = "password" required></center></p>
+	<p><center><font color="black">Verify: </font> <input type = password name = "verifypassword" id = "verifypassword" required onblur="check()"></center></p>
+	<center><span id="warn" style="color:red"> </span></center><br>
+		
+	<center><input type=submit value="Register"></center>
+	</fieldset>
 </form>
 
-<p><a href="index.html" style="color:white">CLICK HERE to Login!</a></p>
+
+
+
+
+
+
+
+<p><center><a href="index.html" style="color:black">CLICK HERE to Login!</a></center></p>
 </body>
 </html>
