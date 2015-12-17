@@ -23,6 +23,7 @@ $response = $client->send_request($request);
 
 print("
 <head>
+<title>New Jersey Weather</title>
 <style>
 table, th, td {
     
@@ -33,8 +34,8 @@ table {
     border-spacing: 5px;
 }
 #bigbox { border-radius: 20px; background:  #b3b3b3; }
-#titlebox { border-radius: 20px;  background:  #eeeeee; }
-#infobox { border-radius: 20px; height:200px; width:19%; background:  #eeeeee; }
+#titlebox { border-radius: 10px; width:175px; background:  #eeeeee; }
+#infobox { border-radius: 20px; height:180px; width:175px; background:  #eeeeee; }
 </style>
 </head>
 ");
@@ -43,7 +44,7 @@ print("<body background='weather.jpg'>");
 print('<font color="white" align="center"><h1>New Jersey Weather</h1></font>');
 
 print('
-<table <fieldset id = "bigbox">
+<center><table <fieldset id = "bigbox">
     <thead>
         <tr>
             <th><fieldset id = "titlebox">');
@@ -69,7 +70,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["0"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["0"]["0"]["weather"]);
+	print('Condition: '.$response["0"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["0"]["0"]["wind"]);
 	print('</font></td>
@@ -77,7 +78,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["1"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["1"]["0"]["weather"]);
+	print('Condition: '.$response["1"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["1"]["0"]["wind"]);	
 	print('</font></td>
@@ -85,7 +86,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["2"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["2"]["0"]["weather"]);
+	print('Condition: '.$response["2"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["2"]["0"]["wind"]);
 	print('</font></td>
@@ -93,7 +94,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["3"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["3"]["0"]["weather"]);
+	print('Condition: '.$response["3"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["3"]["0"]["wind"]);
 	print('</font></td>
@@ -101,14 +102,13 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["4"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["4"]["0"]["weather"]);
+	print('Condition: '.$response["4"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["4"]["0"]["wind"]);
 	print('</font></td>
    
     </tbody>
-</table>
-<table <fieldset id = "bigbox">
+
     <thead>
         <tr>
             <th><fieldset id = "titlebox">');
@@ -134,7 +134,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["5"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["5"]["0"]["weather"]);
+	print('Condition: '.$response["5"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["5"]["0"]["wind"]);
 	print('</font></td>
@@ -142,7 +142,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["6"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["6"]["0"]["weather"]);
+	print('Condition: '.$response["6"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["6"]["0"]["wind"]);	
 	print('</font></td>
@@ -150,7 +150,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["7"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["7"]["0"]["weather"]);
+	print('Condition: '.$response["7"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["7"]["0"]["wind"]);
 	print('</font></td>
@@ -158,7 +158,7 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["8"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["8"]["0"]["weather"]);
+	print('Condition: '.$response["8"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["8"]["0"]["wind"]);
 	print('</font></td>
@@ -166,13 +166,13 @@ print('
         <td <fieldset id = "infobox">');
 	print('Temperature: '.$response["9"]["0"]["temp"]);
 	print("<p>");
-	print('Forecast: '.$response["9"]["0"]["weather"]);
+	print('Condition: '.$response["9"]["0"]["weather"]);
 	print("<p>");
 	print('Wind: '.$response["9"]["0"]["wind"]);
 	print('</font></td>
    
     </tbody>
-</table>
+</table></center>
 ');
 
 ?>

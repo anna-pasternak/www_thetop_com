@@ -14,11 +14,20 @@ else
   $msg = "test message";
 }
 
+$username = $_POST["username"];
+$password = $_POST["password"];
+$email = $_POST["email"];
+
+//$cleanUsername = mysql_real_escape_string($username);
+//$cleanPassword = mysql_real_escape_string($password);
+//$cleanEmail = mysql_real_escape_string($email);
+
+
 $request = array();
 $request['type'] = "register";
-$request['username'] = $_POST["username"];
-$request['password'] = $_POST["password"];
-$request['email'] = $_POST["email"];
+$request['username'] = $username;
+$request['password'] = $password;
+$request['email'] = $email;
 $request['message'] = $msg;
 $response = $client->send_request($request);
 //$response = $client->publish($request);
