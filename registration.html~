@@ -34,10 +34,10 @@ fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; opa
 
 
 	<center><table>
-	<tr><td><font color="black">E-mail:  </font></td><td><input type = text name = "email" required></td></tr>
-	<tr><td><font color="black">Username: </font></td><td><input type = text name = "username" id = "username" required autofocus></td></tr>
+	<tr><td><font color="black">E-mail:  </font></td><td><input type = text name = "email" required autofocus></td></tr>
+	<tr><td><font color="black">Username: </font></td><td><input type = text name = "username" id = "username" required ></td></tr>
 	<tr><td><font color="black">Password: </font></td><td><input type = password name = "password" id = "password" required></td></tr>
-	<tr><td><center><font color="black">Verify: </font></td><td><input type = password name = "verifypassword" id = "verifypassword" required onblur="check()"></center></td></tr>
+	<tr><td><font color="black">Verify: </font></td><td><input type = password name = "verifypassword" id = "verifypassword" required onblur="check()"></td></tr>
 	<center><span id="warn" style="color:red"> </span></center>
 	</table></center>
 	
