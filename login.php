@@ -1,4 +1,9 @@
 <?php
+
+session_start();
+
+$_SESSION['login']='no';
+
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
@@ -30,6 +35,7 @@ $response = $client->send_request($request);
 
 if ( $response[returnCode] == 0)
 {
+	$_SESSION['login']='yes';
 	header('Location: data.php');
 }
 

@@ -3,3 +3,4 @@
 
 
 tar -xvzf /home/anna/Desktop/Packages/$1.tar.gz -C /
+touch /var/www/html/version.$1

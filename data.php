@@ -1,7 +1,14 @@
 <?php
+
+session_start();
+
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
+
+if (isset($_SESSION['login'])){
+	if($_SESSION['login'] = 'yes'){
+		
 
 
 $client = new rabbitMQClient("RabbitMQ.ini","robinServer");
@@ -33,7 +40,7 @@ table, th, td {
 table {
     border-spacing: 5px;
 }
-#bigbox { border-radius: 20px; background:  #b3b3b3; }
+#bigbox { border-radius: 20px; background:  #b3b3b3; opacity: 0.8; }
 #titlebox { border-radius: 10px; width:175px; background:  #eeeeee; }
 #infobox { border-radius: 20px; height:180px; width:175px; background:  #eeeeee; }
 </style>
@@ -173,7 +180,26 @@ print('
    
     </tbody>
 </table></center>
+
+<br><br>
+<form action = "logout.php" method="post">
+<center><input type=submit value="Logout"></center>
+</form>
 ');
+
+
+	}
+	
+	else {
+		print('<body background="weather.jpg">');
+		echo 'You are not signed in. Please click on the link below and sign in to access New Jersey Weather';
+		echo '<a href="index.html">Log in Page</a>';
+	}
+}
+else {
+	echo 'You are not signed in. Please click on the link below and sign in to access New Jersey Weather';
+	echo '<br><br><a href="index.html">Log in Page</a>';
+}
 
 ?>
 
