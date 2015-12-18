@@ -3,4 +3,4 @@
 
 
 tar -xvzf /home/anna/Desktop/Packages/$1.tar.gz -C /
-touch /var/www/html/version.$1
+cp /home/anna/Desktop/Packages/$1.tar.gz /home/anna/Desktop/Backup/$1.tar.gz

@@ -8,7 +8,7 @@
 
 
 <style>
-fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; 
+fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; opacity: 0.9; 
             border-radius: 20px; /* CSS3 */ behavior:url("border-radius.htc"); }
 #innerfield { width: 40%; margin-top: 100px; background:  #eeeeee; }
 </style>
@@ -21,8 +21,11 @@ fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee;
 	<fieldset id = innerfield>
 	<p><p><center><font color="black"><h1>New Jersey Weather</h1></font></center></p></p>
 	
-	<p><center><font color="black">Username: </font><input type = text name = "username" id = "username" autocomplete = "on" required autofocus/></center></p>	
-	<p><center><font color="black">Password:</font></center><br><center><input type = password name = "password" id = "password" autocomplete = "off" required/></center></p>
+	<center><table><tr>
+	<td><font color="black">Username: </font></td><td><input type = text name = "username" id = "username" autocomplete = "on" required autofocus/></td></tr>	
+	<tr><td><font color="black">Password: </font></td><td><input type = password name = "password" id = "password" autocomplete = "off" required/></td></tr>
+	</table></center>
+
 	<center><input type=submit value="Login"></center>
 	</fieldset>
 </form>

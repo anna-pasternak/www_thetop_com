@@ -21,7 +21,7 @@
 
 
 <style>
-fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; 
+fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee; opacity: 0.9; 
             border-radius: 20px; /* CSS3 */ behavior:url("border-radius.htc"); }
 #innerfield { width: 40%; margin-top: 100px; background:  #eeeeee; }
 </style>
@@ -32,12 +32,15 @@ fieldset {  margin: auto; margin-top: 40px; width: 60%; background: #eeeeee;
 	<fieldset id = innerfield>
 	<p><p><center><font color="black"><h1>New Jersey Weather</h1></font></center></p></p>
 
-	<p><center><font color="black">E-mail:  </font> <input type = text name = "email" required></center></p>
-	<p><center><font color="black">Username: </font> <input type = text name = "username" id = "username" required autofocus></center></p>
-	<p><center><font color="black">Password: </font> <input type = password name = "password" id = "password" required></center></p>
-	<p><center><font color="black">Verify: </font> <input type = password name = "verifypassword" id = "verifypassword" required onblur="check()"></center></p>
-	<center><span id="warn" style="color:red"> </span></center><br>
-		
+
+	<center><table>
+	<tr><td><font color="black">E-mail:  </font></td><td><input type = text name = "email" required></td></tr>
+	<tr><td><font color="black">Username: </font></td><td><input type = text name = "username" id = "username" required autofocus></td></tr>
+	<tr><td><font color="black">Password: </font></td><td><input type = password name = "password" id = "password" required></td></tr>
+	<tr><td><font color="black">Verify: </font></td><td><input type = password name = "verifypassword" id = "verifypassword" required onblur="check()"></td></tr>
+	<center><span id="warn" style="color:red"> </span></center>
+	</table></center>
+	
 	<center><input type=submit value="Register"></center>
 	</fieldset>
 </form>
